@@ -19,42 +19,42 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>5.3.22</version>
+            <version>6.0.11</version>
         </dependency>
 
         <!-- Spring ORM pour l'intégration avec Hibernate -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-orm</artifactId>
-            <version>5.3.22</version>
+            <version>6.0.11</version>
         </dependency>
 
         <!-- Hibernate Core pour le mapping objet-relationnel -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>5.6.12.Final</version>
+            <version>6.2.7.Final</version>
         </dependency>
 
         <!-- MySQL Connector pour la connexion à la base de données -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.29</version>
+            <version>8.0.33</version>
         </dependency>
 
         <!-- Spring Transaction pour la gestion automatique des transactions -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-tx</artifactId>
-            <version>5.3.22</version>
+            <version>6.0.11</version>
         </dependency>
 
-        <!-- Validation API pour les annotations JPA -->
+        <!-- Jakarta Validation API pour les annotations JPA -->
         <dependency>
-            <groupId>javax.validation</groupId>
-            <artifactId>validation-api</artifactId>
-            <version>2.0.1.Final</version>
+            <groupId>jakarta.validation</groupId>
+            <artifactId>jakarta.validation-api</artifactId>
+            <version>3.0.2</version>
         </dependency>
     </dependencies>
 </project>

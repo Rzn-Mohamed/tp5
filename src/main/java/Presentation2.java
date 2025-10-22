@@ -11,8 +11,8 @@ public class Presentation2 {
     public static void main(String[] args) {
         ApplicationContext context = new AnnotationConfigApplicationContext(HibernateConfig.class);
 
-        // Fix: Use specific implementation class for proper type safety
-        IDao<Product> productDao = context.getBean(ProductDaoImpl.class);
+        // Get bean by name instead of class type
+        IDao<Product> productDao = (IDao<Product>) context.getBean("productDao");
 
         try {
             // Create a new product

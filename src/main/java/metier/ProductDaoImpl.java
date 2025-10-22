@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-@Repository
+@Repository("productDao")
 @Transactional
 public class ProductDaoImpl implements IDao<Product> {
 
@@ -21,7 +21,7 @@ public class ProductDaoImpl implements IDao<Product> {
     public boolean create(Product product) {
         try {
             Session session = sessionFactory.getCurrentSession();
-            session.save(product);
+            session.persist(product);
             return true;
         } catch (Exception e) {
             e.printStackTrace();
@@ -32,7 +32,7 @@ public class ProductDaoImpl implements IDao<Product> {
     @Override
     public boolean delete(Product product) {
         try {
-            sessionFactory.getCurrentSession().delete(product);
+            sessionFactory.getCurrentSession().remove(product);
             return true;
         } catch (Exception e) {
             e.printStackTrace();
@@ -43,7 +43,7 @@ public class ProductDaoImpl implements IDao<Product> {
     @Override
     public boolean update(Product product) {
         try {
-            sessionFactory.getCurrentSession().update(product);
+            sessionFactory.getCurrentSession().merge(product);
             return true;
         } catch (Exception e) {
             e.printStackTrace();
